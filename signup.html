@@ -4,7 +4,7 @@
     $exists = false;
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
-    include 'partials/_dbconnect.php';
+    include 'partials/_dbconnect.html';
     $username = $_POST["username"];
     $password = $_POST["password"];
     $cpassword = $_POST["cpassword"];
@@ -59,7 +59,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
   </style>
   </head>
   <body>
- <?php require "partials/_nav.php"; ?>
+ <?php require "partials/_nav.html; ?>
  <?php 
  if($showSuccess){
     echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -85,7 +85,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 
  <div id="formbox" class="container my-5" style="width: 28%;border-radius: 17px; display: flex; flex-direction: column; padding: 50px;">
     <h2 class="text-center text-white">Sign Up</h2>
- <form action="signup.php" method="post"  style="letter-spacing: 1px;">
+ <form action="signup.html" method="post"  style="letter-spacing: 1px;">
   <div class="mb-3">
     <label for="username" class="form-label text-white">Username</label>
     <input type="text" class="form-control" id="username" name="username"  aria-describedby="emailHelp" required minlength="4" maxlength="11" autocomplete="off">
@@ -102,7 +102,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
   
   <button type="submit" class="btn btn-primary" style="display: block; margin-top: 45px;width: 100%;">Sign Up</button>
   <p style="margin-top: 12px;text-align: center;" class="text-white">
-      Alread have an account <a href="login.php" style="color: #81e2ff; }"><u>Login</u></a>
+      Alread have an account <a href="login.html" style="color: #81e2ff;"><u>Login</u></a>
   </p>
 </form>
  </div>

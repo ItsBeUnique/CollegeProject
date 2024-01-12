@@ -21,7 +21,7 @@
         $insert = "INSERT INTO `books_details` (`Book_pages`, `Book_size`,`Book_binding`, `Book_ruling`) VALUES ('$pages', '$size','$binding','$ruling')";
         $result = mysqli_query($conn, $insert);
         if($result){
-            echo '<script>window.location.href ="quickTips.php"</script>';
+            echo '<script>window.location.href ="quickTips.html"</script>';
         }
 }
 ?>
@@ -209,7 +209,7 @@
 </style>
 
 <body onload="">
-    <?php require "partials/_nav.php"; ?>
+    <?php require "partials/_nav.html"; ?>
     <div class="container">
 
         <div class="part1">
@@ -319,8 +319,8 @@
                 <span class="lables">Quantity</span>
                 <button class="btn1" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >Bulk Order</button>
               
-                <form action="specification.php" method="post">
-                    <a href="quickTips.php">      
+                <form action="specification.html" method="post">
+                    <a href="quickTips.html">      
                         <button type="submit" class="btn2" onclick="setValue()">Continue</button>
                     </a>
                     <input class="d-none" type="text" id="value1" name="pages"></input>
@@ -377,4 +377,4 @@
 
 </script>
 </html>
-<?php include 'partials/_bulkOrderModal.php'; ?>
+<?php include 'partials/_bulkOrderModal.html'; ?>

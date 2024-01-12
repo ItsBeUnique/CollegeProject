@@ -48,7 +48,7 @@ body {
 </style>
 
 <body >
-    <?php require "partials/_nav.php"; ?>
+    <?php require "partials/_nav.html"; ?>
 
     <div class="container" style="min-height: 50vh; width: 100%;">
         <h2 style="font-weight: bold; margin-top: 45px;">My Orders</h2>
@@ -96,7 +96,7 @@ body {
     </div>
 
 
-    <?php require "partials/_footer.php"; ?>
+    <?php require "partials/_footer.html"; ?>
     <div class="container1"
         style="padding: 0;height: 30px;width: 100%;max-width: 100%;">
         <p class="text-center text-dark fs-6 my-2">Copyright © 2022 ITC Ltd. All rights reserved.</p>
@@ -108,7 +108,7 @@ body {
        order_no = e.target.id.substr(1,);
         if(confirm("Do you want delete this order?")){
           console.log("Yes");
-          window.location = `/CollegeProject/myOrder.php?delete=${order_no}`;
+          window.location = `/CollegeProject/myOrder.html?delete=${order_no}`;
         }
         else{
           console.log("No");

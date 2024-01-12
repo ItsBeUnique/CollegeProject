@@ -4,7 +4,7 @@
    
 
 if($_SERVER['REQUEST_METHOD']=='POST'){
-    include 'partials/_dbconnect.php';
+    include 'partials/_dbconnect.html';
     $username = $_POST["username"];
     $password = $_POST["password"];
    
@@ -19,7 +19,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
                     session_start();
                     $_SESSION['loggedin'] = true;
                     $_SESSION['username'] = $username;
-                    header("location: welcome.php");
+                    header("location: welcome.html");
                   }
                   else{
                     $showError = true;
@@ -60,7 +60,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
   </head>
 
   <body>
- <?php require "partials/_nav.php"; ?>
+ <?php require "partials/_nav.html"; ?>
  <?php 
  if($showSuccess){
     echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
@@ -81,7 +81,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
 <div id="formbox" class="container my-5" style="width: 28%;border-radius: 17px;display: flex;flex-direction: column; padding: 50px;
     box-shadow: 0px 0px 48px #0000006e;">
     <h2 class="text-center text-white">Login</h2>
- <form action="login.php" method="post" style="letter-spacing: 1px;">
+ <form action="login.html" method="post" style="letter-spacing: 1px;">
   <div class="mb-3">
     <label for="username" class="form-label text-white" style="letter-spacing: 1px;">Username</label>
     <input type="text" class="form-control" id="username" name="username"  aria-describedby="emailHelp" required autocomplete="off">
@@ -93,7 +93,7 @@ if($_SERVER['REQUEST_METHOD']=='POST'){
   
   <button type="submit" class="btn btn-primary" style="display: block; margin-top: 45px;width: 100%;letter-spacing: 1px;">Login</button>
   <p style="margin-top: 12px;text-align: center;" class="text-white">
-      Don't have an account <a href="signup.php" style="color: #81e2ff;letter-spacing: 1px;"><u>Sign Up</u></a>
+      Don't have an account <a href="signup.html" style="color: #81e2ff;letter-spacing: 1px;"><u>Sign Up</u></a>
   </p>
 </form>
  </div>
